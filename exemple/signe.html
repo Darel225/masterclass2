@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon résultat</title>
+    <!-- On lie le fichier CSS de cette page -->
+    <link rel="stylesheet" href="signe.css">
+</head>
+<body>
+
+    <!-- Titre principal -->
+    <h1>Ton résultat astrologique</h1>
+
+    <!-- Carte principale qui contient tout le résultat -->
+    <div class="carte-resultat">
+
+        <!-- Nom et signe (rempli par JS) -->
+        <h2 id="message"></h2>
+
+        <!-- Image du signe (src mis par JS) -->
+        <img id="imageSigne" alt="Signe astrologique">
+
+        <!-- Ligne décorative -->
+        <div class="separateur"></div>
+
+        <!-- Description du signe (remplie par JS) -->
+        <p id="description"></p>
+
+        <!-- Infos supplémentaires : âge, genre, heure (remplies par JS) -->
+        <p id="infosSupp"></p>
+
+        <!-- Ligne décorative -->
+        <div class="separateur"></div>
+
+        <!-- Bouton pour ouvrir la prédiction -->
+        <button id="btn-prediction" onclick="ouvrirPopup()"> Voir ma prédiction</button>
+
+        <!-- Bouton retour -->
+        <button id="btn-retour" onclick="retourAccueil()">← Retour au formulaire</button>
+
+    </div>
+
+    <!-- LE VOILE + POPUP
+         Le voile couvre toute la page (fond sombre)
+         Le popup est centré dedans
+         Tout ça est caché (display:none) par défaut
+         Le JS va le montrer au clic
+    -->
+    <div id="voile" style="display:none;">
+        <div id="popup">
+            <h3>Ta prédiction des astres</h3>
+            <p id="textePrediction"></p>
+            <button id="btn-fermer" onclick="fermerPopup()">Fermer</button>
+        </div>
+    </div>
+
+    <script src="signe.js"></script>
+
+</body>
+</html>

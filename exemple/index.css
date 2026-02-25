@@ -1,0 +1,134 @@
+/* Police depuis Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Corps de la page */
+body {
+    background-color: #13132b;
+    /* Léger dégradé subtil en arrière plan */
+    background-image: radial-gradient(ellipse at top, #1e1a40 0%, #13132b 70%);
+    color: #eeeeee;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Titre */
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #d0aaff;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+/* Petit texte sous le titre */
+p {
+    color: #999999;
+    font-size: 0.88rem;
+    margin-bottom: 30px;
+}
+
+/* Ligne dorée sous le titre */
+h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #c89bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* La carte du formulaire */
+#formAstro {
+    background-color: #1e1e3f;
+    border: 1px solid #3a3a6a;
+    border-radius: 14px;
+    display: inline-block;
+    padding: 35px 45px;
+    text-align: left;
+    max-width: 430px;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ombre légère pour donner du relief */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Les labels */
+label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #c8a4ff;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Les champs */
+input, select {
+    background-color: #13132b;
+    border: 1px solid #3a3a6a;
+    border-radius: 8px;
+    color: #eeeeee;
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    /* Transition douce sur la bordure */
+    transition: border-color 0.25s ease;
+}
+
+/* Bordure violette quand on est dans un champ */
+input:focus, select:focus {
+    border-color: #c8a4ff;
+}
+
+/* Texte du placeholder un peu plus discret */
+input::placeholder {
+    color: #555577;
+}
+
+/* Options du select */
+select option {
+    background-color: #13132b;
+}
+
+/* Les 3 champs date côte à côte */
+.groupe-date {
+    display: flex;
+    gap: 10px;
+}
+
+.groupe-date input {
+    flex: 1;
+}
+
+/* Bouton soumettre */
+button[type="submit"] {
+    width: 100%;
+    margin-top: 26px;
+    padding: 13px;
+    background: linear-gradient(to right, #6644bb, #9966dd);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    /* Transition pour l'effet hover */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Légère montée au survol */
+button[type="submit"]:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}

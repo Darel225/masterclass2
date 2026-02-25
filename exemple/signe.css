@@ -1,0 +1,183 @@
+/* Police simple depuis Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Corps de la page */
+body {
+    background-color: #1c1c2e;
+    color: #eeeeee;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* Titre */
+h1 {
+    font-size: 1.8rem;
+    color: #c8a4ff;
+    margin-bottom: 20px;
+}
+
+/* La carte résultat */
+.carte-resultat {
+    background-color: #27274a;
+    border: 1px solid #444477;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 30px 40px;
+    max-width: 440px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Nom et signe */
+h2 {
+    font-size: 1.2rem;
+    color: #f0c060;
+    margin-bottom: 15px;
+}
+
+/* Image ronde */
+#imageSigne {
+    border-radius: 50%;
+    border: 3px solid #f0c060;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Textes */
+#description {
+    color: #dddddd;
+    font-size: 0.95rem;
+    margin: 8px 0;
+}
+
+#infosSupp {
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 6px 0 20px;
+}
+
+/* Petit séparateur */
+.separateur {
+    height: 1px;
+    background-color: #444477;
+    margin: 16px 0;
+}
+
+/* Bouton prédiction */
+#btn-prediction {
+    background-color: #7755cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 10px;
+    width: 100%;
+}
+
+#btn-prediction:hover {
+    background-color: #9977ee;
+}
+
+/* Bouton retour */
+#btn-retour {
+    background-color: transparent;
+    color: #aaaaaa;
+    border: 1px solid #444477;
+    border-radius: 8px;
+    padding: 9px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#btn-retour:hover {
+    border-color: #c8a4ff;
+    color: #c8a4ff;
+}
+
+/* ==============================
+   VOILE + POPUP
+   ============================== */
+
+/* Le voile sombre derrière le popup */
+#voile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;               /* pour centrer le popup */
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+/* Le popup */
+#popup {
+    background-color: #27274a;
+    border: 1px solid #f0c060;
+    border-radius: 12px;
+    padding: 30px 35px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    /* Animation simple : apparaît en grandissant légèrement */
+    animation: popup-open 0.3s ease;
+}
+
+@keyframes popup-open {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Titre du popup */
+#popup h3 {
+    color: #f0c060;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+/* Texte de la prédiction */
+#textePrediction {
+    color: #dddddd;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin: 10px 0 20px;
+}
+
+/* Bouton fermer */
+#btn-fermer {
+    background-color: transparent;
+    color: #aaaaaa;
+    border: 1px solid #444477;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+#btn-fermer:hover {
+    border-color: #c8a4ff;
+    color: #c8a4ff;
+}

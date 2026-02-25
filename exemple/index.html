@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Horoscope</title>
+    <!-- On lie le fichier CSS de cette page -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Titre principal de la page -->
+    <h1>Découvre ton signe astrologique</h1>
+    <p>Remplis le formulaire ci-dessous :</p>
+
+    <!-- Le formulaire avec l'id "formAstro" pour le cibler en JS -->
+    <form id="formAstro">
+
+        <!-- Champ Nom -->
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" placeholder="Ton nom" required><br><br>
+
+        <!-- Champ Prénom -->
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" id="prenom" placeholder="Ton prénom" required><br><br>
+
+        <!-- Date de naissance : on entoure les 3 champs dans un div pour les aligner côte à côte -->
+        <label>Date de naissance :</label>
+        <div class="groupe-date">
+            <input type="number" id="jour"  placeholder="Jour"  min="1" max="31"   required>
+            <input type="number" id="mois"  placeholder="Mois"  min="1" max="12"   required>
+            <input type="number" id="annee" placeholder="Année" min="1900" max="2025" required>
+        </div><br>
+
+        <!-- Menu déroulant pour le genre -->
+        <label for="genre">Genre :</label><br>
+        <select id="genre" required>
+            <option value="">-- Choisir --</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+        </select><br><br>
+
+        <!-- Heure de naissance -->
+        <label for="heure">Heure de naissance :</label><br>
+        <input type="time" id="heure" required><br><br>
+
+        <!-- Bouton pour envoyer le formulaire -->
+        <button type="submit">Voir mon signe </button>
+
+    </form>
+
+    <!-- On charge notre fichier JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
